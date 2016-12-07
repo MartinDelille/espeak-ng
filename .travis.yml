@@ -7,12 +7,14 @@ matrix:
   include:
     - os: linux
       before_install: sudo apt-get update -qq && sudo apt-get install -qq libpulse-dev portaudio19-dev libsonic-dev
-      script: ./autogen.sh && ./configure && make
     - os: osx
       before_install: brew install portaudio
-      script: ./autogen.sh && ./configure --with-mbrola=no && make
 
       #branches:
       #  only:
       #    - master
 
+script:
+  - ./autogen.sh
+  - ./configure
+  - make
