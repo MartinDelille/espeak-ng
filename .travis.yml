@@ -19,3 +19,4 @@ script:
   - ./autogen.sh
   - ./configure
   - make
+
